@@ -3,7 +3,7 @@ import { data as initialData } from './data'; // Adjust path accordingly
 import { Button, TextField, Select, MenuItem, Grid, Card, CardMedia, CardContent, Typography, IconButton, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import { Edit, Delete, Add } from '@mui/icons-material';
 
-const moods = ['happy', 'sad', 'excited'];
+const moods = ['lovely', 'sad', 'excited'];
 const categories = ['main', 'side', 'dessert', 'drink', 'snack'];
 
 const AdminPage = () => {
