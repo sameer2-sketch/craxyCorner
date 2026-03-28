@@ -23,7 +23,7 @@ const OrderTracking = () => {
   const getOrders = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/orders/getOrders`);
+      const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/orders/getOrders`);
       const data = await res.json();
       const ordersWithStatus = data?.orderList.filter(el => el.customerEmail === user.email).map(order => ({
         ...order,
@@ -107,7 +107,7 @@ const OrderTracking = () => {
     try {     
       let payload = { id: cancelModal.orderId, reason: cancelReason };
       setIsCancelOrderLoading(true);
-        const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/orders/cancelOrder`, {
+        const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/orders/cancelOrder`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

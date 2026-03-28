@@ -12,7 +12,7 @@ const SupportTracking = () => {
   const getSupports = async() => {
     setIsLoading(true);
     try {
-      const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/support/getSupport`);
+      const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/support/getSupport`);
       const data = await res.json();
       const userTracking = data?.supportList.filter(el => el.customerEmail === user.email).sort((a,b) => b.createdAt._seconds - a.createdAt._seconds)
       setSupportTickets(userTracking)

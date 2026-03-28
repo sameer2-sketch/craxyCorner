@@ -106,7 +106,7 @@ const Feedback = () => {
     };
     setIsLoading(true);
     try {
-      const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/feedback/addFeedback`, {
+      const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/feedback/addFeedback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

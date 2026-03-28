@@ -17,7 +17,7 @@ const FeaturedItems = () => {
   const getFoodItems = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/food/getFoodItems`);
+      const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/food/getFoodItems`);
       const data = await res.json();
       const featuredItems = data?.foodList?.filter(item => item.isFeatured === true);
       setFeaturedItems(featuredItems)

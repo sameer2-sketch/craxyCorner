@@ -122,7 +122,7 @@ const Cart = () => {
     const tableNumber = localStorage.getItem('tableNumber');
     setIsLoading(true);
      try {
-        const res = await fetch('https://tasteflowbackend.onrender.com/api/v1/orders/addOrder', {
+        const res = await fetch('https://backend-i2v9.onrender.com/api/v1/orders/addOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ const Cart = () => {
   const createOrderCafe = async(linkId) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`https://tasteflowbackend.onrender.com/api/v1/orders/check-payment/${linkId}`);
+      const res = await fetch(`https://backend-i2v9.onrender.com/api/v1/orders/check-payment/${linkId}`);
       const data = await res.json();
       if (res.ok) {
         if(data?.paymentStatus === 'PAID') {
@@ -208,7 +208,7 @@ const Cart = () => {
         id: id
       }
       setPaymentPayload(paymentPayload);
-      const res = await fetch('https://tasteflowbackend.onrender.com/api/v1/orders/handle-payment', {
+      const res = await fetch('https://backend-i2v9.onrender.com/api/v1/orders/handle-payment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
