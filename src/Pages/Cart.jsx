@@ -135,7 +135,7 @@ const Cart = () => {
           customerName: user.name,
           status: 'pending',
           'id': linkId,
-          totalAmount: +(getTotal() * 1.08).toFixed(2),
+          totalAmount: +(getTotal() - getTotal() * 0.10 + (getTotal() - getTotal() * 0.10) * 0.08).toFixed(2),
           from: 'cafe'
         }),
       });
@@ -199,11 +199,15 @@ const Cart = () => {
     setIsLoading(true);
     try {
       let id = uuidv4();
+      const discountedTotal = getTotal() - getTotal() * 0.10;
+      const taxAmount = discountedTotal * 0.08;
+      const finalTotal = discountedTotal + taxAmount;
+      
       const paymentPayload = {
         customerPhoneNumber: phone,
         customerEmail: user.email,
         customerName: user.name,
-        totalAmount: +(getTotal() * 1.08).toFixed(2),
+        totalAmount: +finalTotal.toFixed(2),
         from: 'cafe',
         id: id
       }
@@ -260,14 +264,14 @@ const Cart = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
-                          className="p-1 rounded-full hover:bg-primary-50"
+                          className="p-1 rounded-full bg-pink-200 hover:bg-pink-300"
                         >
                           <Minus className="h-4 w-4" />
                         </button>
                         <span className="w-8 text-center">{item.quantity}</span>
                         <button
                           onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
-                          className="p-1 rounded-full hover:bg-primary-50"
+                          className="p-1 rounded-full bg-pink-200 hover:bg-pink-300"
                         >
                           <Plus className="h-4 w-4" />
                         </button>
@@ -278,7 +282,7 @@ const Cart = () => {
                         </span>
                         <button
                           onClick={() => removeItem(item.id)}
-                          className="text-red-500 hover:text-red-600"
+                          className="bg-pink-200 hover:bg-pink-300 text-red-600 p-2 rounded"
                         >
                           <Trash2 className="h-5 w-5" />
                         </button>
@@ -293,7 +297,45 @@ const Cart = () => {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-soft p-6">
-              <h2 className="font-serif text-xl font-bold text-primary-800 mb-4">Order Summary</h2>
+              <h2 className="font-serif text-xl font-bold text-primary-800 mb-4">Price Details ({items.length} Items)</h2>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between text-accent-600">
+                  <span>Product Price</span>
+                  <span className="text-accent-700">+ ₹{getTotal().toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-teal-600">
+                  <span>Total Discounts</span>
+                  <span>- ₹{(getTotal() * 0.10).toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-accent-600">
+                  <span>Tax (8%)</span>
+                  <span>+ ₹{((getTotal() - getTotal() * 0.10) * 0.08).toFixed(2)}</span>
+                </div>
+                <div className="border-t border-accent-200 pt-3">
+                  <div className="flex justify-between font-bold text-lg">
+                    <span>Order Total</span>
+                    <span className="text-secondary-500">
+                    ₹{(getTotal() - getTotal() * 0.10 + (getTotal() - getTotal() * 0.10) * 0.08).toFixed(2)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-teal-50 border border-teal-200 p-3 rounded-md mb-6 flex items-start">
+                <div className="text-teal-600 mr-2 flex-shrink-0 mt-0.5">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-sm text-teal-700">
+                  Yay! Your total discount is ₹{(getTotal() * 0.10).toFixed(2)}
+                </p>
+              </div>
+
+              <p className="text-xs text-accent-600 mb-4 text-center">
+                Clicking on 'Pay' will not deduct any money
+              </p>
 
               {/* Table Selection */}
               <div className="mb-6">
@@ -342,25 +384,6 @@ const Cart = () => {
                 />
               </div>
 
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-accent-600">
-                  <span>Subtotal</span>
-                  <span>₹{getTotal().toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-accent-600">
-                  <span>Tax (8%)</span>
-                  <span>₹{(getTotal() * 0.08).toFixed(2)}</span>
-                </div>
-                <div className="border-t border-accent-200 pt-3">
-                  <div className="flex justify-between font-bold text-lg">
-                    <span>Total</span>
-                    <span className="text-secondary-500">
-                    ₹{(getTotal() * 1.08).toFixed(2)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
               {selectedTable && (
                 <div className="bg-primary-50 p-3 rounded-md mb-4">
                   <p className="text-sm text-primary-800">
@@ -376,7 +399,7 @@ const Cart = () => {
                 </div>
               )}
 
-             <button disabled={!phone || !selectedTable} className="btn btn-outline w-full mt-4" onClick={handlePayment}>Pay</button>
+             <button disabled={!phone || !selectedTable} className="btn btn-outline w-full mt-4 bg-orange-50 hover:bg-amber-500" onClick={handlePayment}>Pay</button>
 
               <Link
                 to="/menu"
