@@ -307,7 +307,7 @@ const Cart = () => {
                     setSelectedTable(e.target.value);
                     setTableError('');
                   }}
-                  className={`form-input w-full ${tableError ? 'border-red-500' : ''}`}
+                  className={`form-input bg-red-200 w-full ${tableError ? 'border-red-500' : ''}`}
                 >
                   <option value="">Choose your table</option>
                   {[...Array(10)].map((_, i) => (
@@ -334,7 +334,7 @@ const Cart = () => {
                   name="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${phoneError
+                  className={`w-full bg-red-200 px-4 py-3 rounded-lg border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${phoneError
                       ? 'border-red-300 focus:border-red-500'
                       : 'border-accent-200 focus:border-primary-500'
                     }`}
