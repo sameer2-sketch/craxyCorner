@@ -32,11 +32,7 @@ const Home = ({ user }) => {
       <FeaturedItems />
       <About />
       
-      {/* Parallax CTA Section */}
-      <section className="relative py-32 bg-fixed bg-cover bg-center"
-        style={{ 
-          backgroundImage: "url('https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
-        }}
+      <section className="relative py-32 bg-fixed bg-cover bg-center bg-[url('https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')]"
       >
         <div className="absolute inset-0 bg-primary-900 opacity-70"></div>
         <motion.div 
