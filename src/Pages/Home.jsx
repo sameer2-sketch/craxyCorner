@@ -8,7 +8,6 @@ import FeaturedItems from '../components/Home/FeaturedItems';
 import About from '../components/Home/About';
 import Testimonials from '../components/Home/Testimonials';
 import Hero from '../components/Home/Hero';
-import VoiceAssistant from '../components/Home/VoiceAssistant';
 
 const Home = ({ user }) => {
   return (
@@ -91,13 +90,7 @@ const Home = ({ user }) => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-wrap gap-4 justify-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all"
-            >
-              Learn More
-            </motion.button>
+           
           </motion.div>
         </motion.div>
       </section>
@@ -127,7 +120,7 @@ const Home = ({ user }) => {
               Follow Us on<span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-secondary-600"> Instagram</span>
             </h2>
             <p className="section-subtitle text-lg">
-              Share your Moodsync Cafe moments with us using <span className="font-bold text-secondary-600">#MoodsyncCafeMoments</span>
+              Share your MoodNest Cafe moments with us using <span className="font-bold text-secondary-600">#MoodNestCafeMoments</span>
             </p>
           </motion.div>
           
@@ -161,7 +154,7 @@ const Home = ({ user }) => {
                 >
                   <div className="text-white text-center">
                     <p className="font-bold mb-2">Check on Instagram</p>
-                    <p className="text-sm text-gray-300">#MoodsyncCafeMoments</p>
+                    <p className="text-sm text-gray-300">#MoodNestCafeMoments</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -195,9 +188,6 @@ const Home = ({ user }) => {
           </motion.div>
         </div>
       </section>
-      
-      {/* Voice Assistant Component */}
-      <VoiceAssistant />
     </div>
   );
 };

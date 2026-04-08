@@ -215,7 +215,7 @@ const Support = () => {
                         name="name"
                         value={formState.name}
                         onChange={handleChange}
-                        className={`form-input ${errors.name ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 ${errors.name ? 'border-red-500' : ''}`}
                         placeholder="Your full name"
                       />
                       {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -228,7 +228,7 @@ const Support = () => {
                         name="email"
                         value={formState.email}
                         onChange={handleChange}
-                        className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 ${errors.email ? 'border-red-500' : ''}`}
                         placeholder="Your email address"
                       />
                       {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -246,7 +246,7 @@ const Support = () => {
                         name="tableNumber"
                         value={formState.tableNumber}
                         onChange={handleChange}
-                        className={`form-input ${errors.tableNumber ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 ${errors.tableNumber ? 'border-red-500' : ''}`}
                       >
                         <option value="">Select your table</option>
                         {[...Array(10)].map((_, i) => (
@@ -264,7 +264,7 @@ const Support = () => {
                         name="problemType"
                         value={formState.problemType}
                         onChange={handleChange}
-                        className={`form-input ${errors.problemType ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 ${errors.problemType ? 'border-red-500' : ''}`}
                       >
                         <option value="">Select problem type</option>
                         {problemTypes.map((type) => (
@@ -284,7 +284,7 @@ const Support = () => {
                       name="priority"
                       value={formState.priority}
                       onChange={handleChange}
-                      className="form-input"
+                      className="form-input bg-pink-100"
                     >
                       <option value="low">Low - General inquiry</option>
                       <option value="medium">Medium - Standard issue</option>
@@ -303,7 +303,7 @@ const Support = () => {
                       name="description"
                       value={formState.description}
                       onChange={handleChange}
-                      className={`form-input min-h-[120px] ${errors.description ? 'border-red-500' : ''}`}
+                      className={`form-input bg-pink-100 min-h-[120px] ${errors.description ? 'border-red-500' : ''}`}
                       placeholder="Please describe the issue you're experiencing in detail..."
                     ></textarea>
                     {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
@@ -408,7 +408,7 @@ const Support = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-primary-800 mb-1">Is there WiFi available?</h4>
-                  <p className="text-accent-600 text-sm">Yes! Network: "MoodSyncCafe_Guest" | Password: "mood2025"</p>
+                  <p className="text-accent-600 text-sm">Yes! Network: "MoodNestCafe_Guest" | Password: "mood2025"</p>
                 </div>
               </div>
             </div>

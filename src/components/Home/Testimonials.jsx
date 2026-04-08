@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'Richi Mehta',
     role: 'College Student',
-    content: "MoodSync cafe has completely redefined ordering food for me. I love how it understands my mood and suggests just the right comfort food.",
+    content: "MoodNest cafe has completely redefined ordering food for me. I love how it understands my mood and suggests just the right comfort food.",
     rating: 5,
     image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
   },

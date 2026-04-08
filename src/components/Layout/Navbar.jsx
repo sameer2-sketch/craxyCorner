@@ -61,7 +61,7 @@ const Navbar = ({ user, onLogout }) => {
               isScrolled ? 'text-primary-800' : 'text-white'
             }`}
           >
-            MoodSync Cafe
+            MoodNest Cafe
           </span>
         </Link>
 

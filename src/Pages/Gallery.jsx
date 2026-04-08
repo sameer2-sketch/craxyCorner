@@ -127,7 +127,7 @@ const Gallery = () => {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Our Gallery</h1>
           <p className="text-xl max-w-xl mx-auto">
-            Explore the ambiance, dishes, and moments that make MoodSync Cafe special
+            Explore the ambiance, dishes, and moments that make MoodNest Cafe special
           </p>
         </div>
       </div>
@@ -223,7 +223,7 @@ const Gallery = () => {
         <div className="container-custom text-center">
           <h2 className="section-title">Share Your Moments</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Tag us on Instagram with #MoodSyncCafeMoments for a chance to be featured on our page!
+            Tag us on Instagram with #MoodNestCafeMoments for a chance to be featured on our page!
           </p>
           <a 
             href="https://www.instagram.com" 

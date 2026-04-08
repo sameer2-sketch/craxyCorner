@@ -21,10 +21,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img src={logo} style={{ height: 50, width: 50 }}/>
-              <span className="font-serif text-xl font-bold">MoodSync Cafe</span>
+              <span className="font-serif text-xl font-bold">MoodNest Cafe</span>
             </div>
             <p className="text-primary-100 mb-6">
-             Good moods. Great food. Since 2010, that’s the MoodSync Corner promise.
+             Good moods. Great food. Since 2010, that's the MoodNest Corner promise.
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-primary-100 hover:text-secondary-500 transition-colors duration-300">
@@ -91,7 +91,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 flex-shrink-0 text-primary-200" />
-                <p>hello@moodsynccafe.com</p>
+                <p>hello@moodnestcafe.com</p>
               </li>
             </ul>
             
@@ -112,7 +112,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-700 mt-12 pt-8 text-center">
           <p className="text-primary-200">
-            &copy; {new Date().getFullYear()} MoodSync Cafe. All rights reserved.
+            &copy; {new Date().getFullYear()} MoodNest Cafe. All rights reserved.
           </p>
         </div>
       </div>

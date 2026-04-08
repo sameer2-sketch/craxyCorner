@@ -95,7 +95,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white"
           >
             <Sparkles className="w-4 h-4 text-secondary-400" />
-            <span className="text-sm font-semibold">Welcome to Moodsync Cafe</span>
+            <span className="text-sm font-semibold">Welcome to MoodNest Cafe</span>
           </motion.div>
 
           {/* Main Heading */}

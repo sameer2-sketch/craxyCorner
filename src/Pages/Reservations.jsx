@@ -83,7 +83,7 @@ const Reservations = () => {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Reserve a Table</h1>
           <p className="text-xl max-w-xl mx-auto">
-            Make a reservation for your next visit to MoodSync Cafe
+            Make a reservation for your next visit to MoodNest Cafe
           </p>
         </div>
       </div>
@@ -296,7 +296,7 @@ const Reservations = () => {
                   </p>
                   <div className="bg-white p-4 rounded-md">
                     <p className="font-medium">Phone: (123) 456-7890</p>
-                    <p className="font-medium">Email: reservations@moodsync.com</p>
+                    <p className="font-medium">Email: reservations@moodnest.com</p>
                   </div>
                 </div>
               </div>

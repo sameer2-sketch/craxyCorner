@@ -93,7 +93,7 @@ const Landing = ({ onUserRegistered }) => {
                 </div>
               </div>
               <div>
-                <h1 className="font-serif text-4xl font-bold text-primary-800">MoodSync Cafe</h1>
+                <h1 className="font-serif text-4xl font-bold text-primary-800">MoodNest Cafe</h1>
                 <p className="text-secondary-600 font-medium">Exceptional Cuisine</p>
               </div>
             </motion.div>
@@ -174,7 +174,7 @@ const Landing = ({ onUserRegistered }) => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
+                      className={`w-full px-4 py-3 rounded-lg bg-pink-100 border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
                         errors.name 
                           ? 'border-red-300 focus:border-red-500' 
                           : 'border-accent-200 focus:border-primary-500'
@@ -202,7 +202,7 @@ const Landing = ({ onUserRegistered }) => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
+                      className={`w-full px-4 py-3 rounded-lg bg-pink-100 border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
                         errors.email 
                           ? 'border-red-300 focus:border-red-500' 
                           : 'border-accent-200 focus:border-primary-500'

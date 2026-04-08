@@ -83,7 +83,7 @@ const Menu = () => {
       {isLoading && <Loader showLoader={(isLoading)} />}
       <div className="relative h-80 bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage: "url('https://images.pexels.com/photos/7438530/pexels-photo-7438530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1504674900967-77283bcf0adc?w=1200&h=600&fit=crop')"
         }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center text-white">

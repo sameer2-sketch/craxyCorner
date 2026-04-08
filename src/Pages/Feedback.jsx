@@ -160,7 +160,7 @@ const Feedback = () => {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Share Your Feedback</h1>
           <p className="text-xl max-w-xl mx-auto">
-            Help us improve by sharing your experience at MoodSync Cafe
+            Help us improve by sharing your experience at MoodNest Cafe
           </p>
         </div>
       </div>
