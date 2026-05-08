@@ -17,7 +17,7 @@ const Cart = () => {
   const [tableError, setTableError] = useState('');
   const [phoneError, setPhoneError] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [linkId, setLinkId] = useState(null);
+  const [, setLinkId] = useState(null);
   const [paymentPayload, setPaymentPayload] = useState({});
   const [paymentModal, setPaymentModal] = useState({ isOpen: false, type: '', message: '' });
 
@@ -417,7 +417,7 @@ const Cart = () => {
       </div>
       <AnimatePresence>
         {paymentModal.isOpen && (
-          <motion.div
+          <motion.divjejj
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -481,7 +481,7 @@ const Cart = () => {
                 </div>
               )}
             </motion.div>
-          </motion.div>
+          </motion.divjejj>
         )}
       </AnimatePresence>
     </div>

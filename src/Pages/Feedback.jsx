@@ -207,7 +207,7 @@ const Feedback = () => {
                         name="name"
                         value={formState.name}
                         onChange={handleChange}
-                        className={`form-input ${errors.name ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200 ${errors.name ? 'border-red-500' : ''}`}
                         placeholder="Your full name"
                       />
                       {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -220,7 +220,7 @@ const Feedback = () => {
                         name="email"
                         value={formState.email}
                         onChange={handleChange}
-                        className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+                        className={`form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200 ${errors.email ? 'border-red-500' : ''}`}
                         placeholder="Your email address"
                       />
                       {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -235,7 +235,7 @@ const Feedback = () => {
                       name="orderNumber"
                       value={formState.orderNumber}
                       onChange={handleChange}
-                      className="form-input"
+                      className="form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200"
                       placeholder="Enter your order number if applicable"
                     />
                   </div>
@@ -276,7 +276,7 @@ const Feedback = () => {
                       name="category"
                       value={formState.category}
                       onChange={handleChange}
-                      className={`form-input ${errors.category ? 'border-red-500' : ''}`}
+                      className={`form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200 ${errors.category ? 'border-red-500' : ''}`}
                     >
                       <option value="">Select a category</option>
                       {feedbackCategories.map((category) => (
@@ -295,7 +295,7 @@ const Feedback = () => {
                       name="description"
                       value={formState.description}
                       onChange={handleChange}
-                      className={`form-input min-h-[120px] ${errors.description ? 'border-red-500' : ''}`}
+                      className={`form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200 min-h-[120px] ${errors.description ? 'border-red-500' : ''}`}
                       placeholder="Please share your detailed feedback about your experience..."
                     ></textarea>
                     {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
@@ -349,7 +349,7 @@ const Feedback = () => {
                       name="suggestions"
                       value={formState.suggestions}
                       onChange={handleChange}
-                      className="form-input min-h-[100px]"
+                      className="form-input bg-pink-100 border-pink-300 text-primary-900 focus:border-pink-500 focus:ring-pink-200 min-h-[100px]"
                       placeholder="How can we improve your experience?"
                     ></textarea>
                   </div>
@@ -380,7 +380,7 @@ const Feedback = () => {
             <div className="bg-primary-50 rounded-lg p-8 mb-8">
               <div className="flex items-center mb-6">
                 <Heart className="h-8 w-8 text-primary-800 mr-3" />
-                <h2 className="text-2xl font-serif font-bold text-primary-800">Why Your Feedback Matters</h2>
+                <h2 className="text-2xl font-serif font-bold text-primary-800">Why Yours Feedback Matters</h2>
               </div>
               
               <div className="space-y-6">

@@ -85,7 +85,7 @@ const FeaturedItems = () => {
       {isLoading && <Loader showLoader={(isLoading)} />}
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="section-title">Our Featured Items</h2>
+          <h2 className="section-title">Our  Most Featured Items</h2>
           <p className="section-subtitle">
             Discover items that match your mood and cravings
           </p>

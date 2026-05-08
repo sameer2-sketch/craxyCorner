@@ -104,7 +104,7 @@ const Hero = () => {
             custom={1}
             className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight"
           >
-            Where Mood<br />
+            Where your Mood<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-500">
               Meets Menu
             </span>
