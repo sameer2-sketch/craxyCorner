@@ -160,13 +160,10 @@ const OrderTracking = () => {
   return (
     <div className="pt-16">
       {(isLoading || isCancelOrderLoading) && <Loader showLoader={(isLoading || isCancelOrderLoading)} />}
-      <div className="relative h-80 bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')"
-        }}>
+      <div className="relative h-80 bg-cover bg-center flex items-center justify-center bg-[url('https://images.pexels.com/photos/163030/pexels-photo-163030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')]">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Track Your Orders</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Track Your Order</h1>
           <p className="text-xl max-w-xl mx-auto">
             Stay updated on your order status and estimated delivery time
           </p>

@@ -81,8 +81,13 @@ const Menu = () => {
   return (
     <div className="pt-16">
       {isLoading && <Loader showLoader={(isLoading)} />}
-      <div className="relative h-80 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1504674900967-77283bcf0adc?w=1200&h=600&fit=crop')] flex items-center justify-center">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative h-80 overflow-hidden flex items-center justify-center">
+        <img
+          src="/menu-hero.svg"
+          alt="Our Menu background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Our Menu</h1>
           <p className="text-xl max-w-xl mx-auto">
